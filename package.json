@@ -1,0 +1,37 @@
+{
+  "name": "nosqlimport",
+  "version": "0.1.0",
+  "description": "CSV/TSV to JSON converter for importing data into NoSQL document stores",
+  "main": "index.js",
+  "bin": {
+    "nosqlimport": "bin/nosqlimport.bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glynnbird/nosqlimport.git"
+  },
+  "keywords": [
+    "nosql",
+    "csv",
+    "json",
+    "tsv",
+    "import"
+  ],
+  "author": "Glynn Bird <glynn.bird@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/glynnbird/nosqlimport/issues"
+  },
+  "homepage": "https://github.com/glynnbird/nosqlimport#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "csv-parse": "^1.1.4",
+    "debug": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
