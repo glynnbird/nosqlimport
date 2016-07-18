@@ -2,7 +2,7 @@
 
 A command-line tool and Node.js library that allows CSV/TSV data to be imported into a variety of NoSQL databases
 
-![schematic](https://github.com/glynnbird/nosqlimport/raw/master/images/nosqlimport-schematic.png "Schematic Diagram")
+![schematic](https://raw.githubusercontent.com/glynnbird/nosqlimport/master/img/nosqlimport-schematic.png "Schematic Diagram") 
 
 ## Installing
 
@@ -116,7 +116,7 @@ module.exports = function(doc) {
 * -n --nosql [db type] - the type of NoSQL database to write to (default stdout)
 * -t --transform [filename] - the filename containing the JavaScript transform function (default none)
 * -d --delimiter [character] - the delimiter character to use (default '\t')
-* -db --database [db name] - the name of the database to write to
+* --db --database [db name] - the name of the database to write to
 * -u --url [url] - the url of the database to write to
 
 
