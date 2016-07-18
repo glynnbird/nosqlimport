@@ -30,4 +30,5 @@ nosqlimport.importStream(process.stdin, process.stdout, cloptions, function(err,
   } else {
     debug('writecomplete', data);
   }
+  process.exit();
 });

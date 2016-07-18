@@ -36,7 +36,11 @@ var importStream = function(rs, ws, opts, callback) {
     switch(opts.nosql) {
       case 'couchdb':
       case 'nosqlimport-couchdb':
-        opts.writer = require('../nosqlimport-couchdb/index.js').writer;
+        opts.writer = require('nosqlimport-couchdb').writer;
+      break;
+      case 'mongodb':
+      case 'nosqlimport-mongodb':
+        opts.writer = require('nosqlimport-mongodb').writer;
       break;
     }  
   } else {
