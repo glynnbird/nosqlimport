@@ -1,6 +1,6 @@
 {
   "name": "nosqlimport",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CSV/TSV to JSON converter for importing data into NoSQL document stores",
   "main": "index.js",
   "bin": {
