@@ -14,10 +14,28 @@ Install with npm:
 > npm install -g nosqlimport
 ```
 
-You'll probably want one of the NoSQL plugins [nosqlimport-couchdb](https://www.npmjs.com/package/nosqlimport-couchdb) [nosqlimport-mongodb](https://www.npmjs.com/package/nosqlimport-mongodb) and/or [nosqlimport-elasticsearch](https://www.npmjs.com/package/nosqlimport-elasticsearch) too e.g.
+You can preview the type of JSON documents *nosqlimport* will create by piping a file into it:
+
+```sh
+> cat test.tsv | nosqlimport
+
+or
+
+> cat test.csv | nosqlimport --delimiter ','
+```
+
+To import data into a NoSQL database, you'll probably want one of the NoSQL plugins:
+
+- CouchDB/Cloudant -  [nosqlimport-couchdb](https://www.npmjs.com/package/nosqlimport-couchdb)
+- MongoDB -  [nosqlimport-mongodb](https://www.npmjs.com/package/nosqlimport-mongodb) 
+- Elasticsearch -  [nosqlimport-elasticsearch](https://www.npmjs.com/package/nosqlimport-elasticsearch) 
 
 ```sh
 > npm install -g nosqlimport-couchdb
+
+or install everything
+
+> npm install -g nosqlimport-couchdb nosqlimport-mongodb nosqlimport-elasticsearch
 ```
 
 Then import data like so:

@@ -27,7 +27,6 @@ describe('Preview mode', function() {
 
   it('preview nonsense', function(done) {
     nosqlimport.previewFile("./test/nonsense.txt", function(err,data, delimiter) {
-      console.log(err, data, delimiter);
       assert.equal(err, null);
       assert.equal(typeof delimiter, 'string');
       assert.equal(delimiter, '?');
