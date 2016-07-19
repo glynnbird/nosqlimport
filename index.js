@@ -42,6 +42,10 @@ var importStream = function(rs, ws, opts, callback) {
       case 'nosqlimport-mongodb':
         opts.writer = require('nosqlimport-mongodb').writer;
       break;
+      case 'elasticsearch':
+      case 'nosqlimport-elasticsearch':
+        opts.writer = require('nosqlimport-elasticsearch').writer;
+      break;
     }  
   } else {
     opts.writer = require('./lib/stdout.js').writer;

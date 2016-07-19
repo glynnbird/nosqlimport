@@ -14,7 +14,7 @@ Install with npm:
 > npm install -g nosqlimport
 ```
 
-You'll probably want one of the NoSQL plugins too e.g.
+You'll probably want one of the NoSQL plugins [nosqlimport-couchdb](https://www.npmjs.com/package/nosqlimport-couchdb) [nosqlimport-mongodb](https://www.npmjs.com/package/nosqlimport-mongodb) and/or [nosqlimport-elasticsearch](https://www.npmjs.com/package/nosqlimport-elasticsearch) too e.g.
 
 ```sh
 > npm install -g nosqlimport-couchdb
@@ -69,6 +69,28 @@ And import data in your code:
       assert.equal(err, null);     
       done(); 
     });
+```
+
+## Nomenclature
+
+Different NoSQL databases have different names for things. CouchDB stores documents in "databases". MongoDB in "collections" that live in databases. Elasticseach in "types" that live in "indexes".
+
+When using *nosqlimport* with CouchDB/Cloudant the `url` parameter defines the URL of the CouchDB instance and the `database` parameter means the database to be written to e.g.:
+
+```sh
+  cat test.txt | nosqlimport --nosql couchdb --url https://myusername:mypassword@myhost.cloudant.com --db mydb
+```
+
+When using *nosqlimport* with MongoDB, the `url` parameter defines the URL of the MongoDB instance including the database and the `database` parameter means the MongoDB *collection* to writer to e.g.:
+
+```sh
+ cat test.txt | nosqlimport --nosql mongodb --url mongodb://localhost:27017/mydatabase --database mycollection
+```
+
+When using *nosqlimport* with Elasticsearch, the `url` parameter defines the URL of the Elastic instance including the index and the `database` parameter means the Elasticsearch *type* to writer to e.g.:
+
+```sh
+ cat test.txt | nosqlimport --nosql elasticsearch --urlhttp://localhost:9200/mydatabase --database mycollection
 ```
 
 ## Transform functions
