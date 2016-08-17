@@ -1,5 +1,6 @@
 var parse = require('csv-parse'),
   fs = require('fs'),
+  path = require('path'),
   preview = require('./lib/preview'),
   defaults = {
     delimiter: '\t',
