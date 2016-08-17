@@ -53,7 +53,7 @@ var importStream = function(rs, ws, opts, callback) {
   }
   
   if (opts.transform) {
-    opts.transform = require(path.resolve(process.cwd(), cloptions.transform))
+    opts.transform = require(path.resolve(process.cwd(), opts.transform))
   }
 
   // ensure we have reasonable defaults
