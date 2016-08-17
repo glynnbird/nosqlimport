@@ -52,7 +52,7 @@ var importStream = function(rs, ws, opts, callback) {
     opts.writer = require('./lib/stdout.js').writer;
   }
   
-  if (opts.transform) {
+  if (opts.transform && typeof opts.transform === 'string') {
     opts.transform = require(path.resolve(process.cwd(), opts.transform))
   }
 
